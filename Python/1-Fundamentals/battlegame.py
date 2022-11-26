@@ -24,22 +24,22 @@ while exit == False:
         print('4) '+orc.capitalize())
         print("5) Exit")
         character = input("Choose your character: ")
-        if character == '1' or character.lower() == wizard.lower():
+        if character == '1' or character.lower() == wizard:
             character = wizard
             my_hp = wizard_hp
             my_damage = wizard_damage
             break
-        elif character == '2' or character.lower() == elf.lower():
+        elif character == '2' or character.lower() == elf:
             character = elf
             my_hp = elf_hp
             my_damage = elf_damage
             break
-        elif character == '3' or character.lower() == human.lower():
+        elif character == '3' or character.lower() == human:
             character = human
             my_damage = human_damage
             my_hp = human_hp
             break
-        elif character == '4' or character.lower() == orc.lower():
+        elif character == '4' or character.lower() == orc:
             character = orc
             my_damage = orc_damage
             my_hp = orc_hp
