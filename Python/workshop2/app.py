@@ -13,27 +13,27 @@ def atm_menu(name):
     print("------------------------------------------")
 
 
-print("          === Automated Teller Machine ===          ")
-
-name = input("Enter name to register: ")
-pin = input('Enter PIN: ')
+print("          === Automated Teller Machine ===          \n")
+name = input("Enter your name to register: ")
+pin = input("Enter PIN: ")
 balance = 0.0
-print(name + ' has been registered with a stating balance of $'+str(balance))
+print(name.capitalize() + " has been registered with starting balance of $"+str(balance))
+print(" ")
 
 while True:
-    print("          === Automated Teller Machine ===          ")
     print('LOGIN')
     name_to_validate = input("Enter Name: ")
     pin_to_validate = input("Enter PIN: ")
-    if name_to_validate == name and pin_to_validate == pin:
-        print("Login Successful!")
+
+    if name == name_to_validate and pin == pin_to_validate:
+        print("Login Successful")
         break
     else:
-        print("Invalid credentials!!!")
+        print("Invalid Credentials!!\n\n")
 
 while True:
     atm_menu(name)
-    option = input('Choose an option: ')
+    option = input("Choose an option: ")
     if option == '1':
         account.show_balance(balance)
     elif option == '2':
@@ -44,4 +44,4 @@ while True:
         account.logout(name)
         break
     else:
-        print('Invalid option, try again!')
+        print("Wrong option!\n\n")
